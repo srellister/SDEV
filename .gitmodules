@@ -1,0 +1,15 @@
+[submodule "2171"]
+	path = 2171
+	url = https://github.com/srellister/sdev2171
+[submodule "2351"]
+	path = 2351
+	url = https://github.com/srellister/sdev2351
+[submodule "2451"]
+	path = 2451
+	url = https://github.com/NAIT-SDEV2451/sdev2451-oe01-student-workbook-srellister.git
+[submodule "2501"]
+	path = 2501
+	url = https://github.com/srellister/sdev2501
+[submodule "2801"]
+	path = 2801
+	url = https://github.com/srellister/sdev2801

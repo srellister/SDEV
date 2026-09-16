@@ -1,6 +1,0 @@
-C:\SDEV\SDEV2351\lessons\lesson04\Day-04-Demonstration-Starter\bs-demo-starter-04\Day04Demo.Tests\bin\Debug\net10.0\.msCoverageSourceRootsMapping_Day04Demo.Tests
-C:\SDEV\SDEV2351\lessons\lesson04\Day-04-Demonstration-Starter\bs-demo-starter-04\Day04Demo.Tests\obj\Debug\net10.0\Day04Demo.Tests.csproj.AssemblyReference.cache
-C:\SDEV\SDEV2351\lessons\lesson04\Day-04-Demonstration-Starter\bs-demo-starter-04\Day04Demo.Tests\obj\Debug\net10.0\Day04Demo.Tests.GeneratedMSBuildEditorConfig.editorconfig
-C:\SDEV\SDEV2351\lessons\lesson04\Day-04-Demonstration-Starter\bs-demo-starter-04\Day04Demo.Tests\obj\Debug\net10.0\Day04Demo.Tests.AssemblyInfoInputs.cache
-C:\SDEV\SDEV2351\lessons\lesson04\Day-04-Demonstration-Starter\bs-demo-starter-04\Day04Demo.Tests\obj\Debug\net10.0\Day04Demo.Tests.AssemblyInfo.cs
-C:\SDEV\SDEV2351\lessons\lesson04\Day-04-Demonstration-Starter\bs-demo-starter-04\Day04Demo.Tests\obj\Debug\net10.0\Day04Demo.Tests.csproj.CoreCompileInputs.cache
