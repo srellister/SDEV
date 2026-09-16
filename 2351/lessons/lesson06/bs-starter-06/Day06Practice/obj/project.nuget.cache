@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "DcGiFbGExYc=",
+  "success": true,
+  "projectFilePath": "a:\\SDEV\\2351\\lessons\\lesson06\\bs-starter-06\\Day06Practice\\Day06Practice.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\srell\\.nuget\\packages\\bysresults\\1.2.3\\bysresults.1.2.3.nupkg.sha512",
+    "C:\\Users\\srell\\.nuget\\packages\\fluxor\\6.0.0\\fluxor.6.0.0.nupkg.sha512",
+    "C:\\Users\\srell\\.nuget\\packages\\fluxor.blazor.web\\6.0.0\\fluxor.blazor.web.6.0.0.nupkg.sha512",
+    "C:\\Users\\srell\\.nuget\\packages\\microsoft.aspnetcore.app.internal.assets\\10.0.11\\microsoft.aspnetcore.app.internal.assets.10.0.11.nupkg.sha512"
+  ],
+  "logs": []
+}

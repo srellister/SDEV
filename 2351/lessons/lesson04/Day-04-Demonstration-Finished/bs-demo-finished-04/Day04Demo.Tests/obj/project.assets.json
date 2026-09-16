@@ -1476,11 +1476,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\SDEV\\SDEV2351\\lessons\\lesson04\\Day-04-Demonstration-Finished\\bs-demo-finished-04\\Day04Demo.Tests\\Day04Demo.Tests.csproj",
+      "projectUniqueName": "A:\\SDEV\\2351\\lessons\\lesson04\\Day-04-Demonstration-Finished\\bs-demo-finished-04\\Day04Demo.Tests\\Day04Demo.Tests.csproj",
       "projectName": "Day04Demo.Tests",
-      "projectPath": "C:\\SDEV\\SDEV2351\\lessons\\lesson04\\Day-04-Demonstration-Finished\\bs-demo-finished-04\\Day04Demo.Tests\\Day04Demo.Tests.csproj",
+      "projectPath": "A:\\SDEV\\2351\\lessons\\lesson04\\Day-04-Demonstration-Finished\\bs-demo-finished-04\\Day04Demo.Tests\\Day04Demo.Tests.csproj",
       "packagesPath": "C:\\Users\\srell\\.nuget\\packages\\",
-      "outputPath": "C:\\SDEV\\SDEV2351\\lessons\\lesson04\\Day-04-Demonstration-Finished\\bs-demo-finished-04\\Day04Demo.Tests\\obj\\",
+      "outputPath": "A:\\SDEV\\2351\\lessons\\lesson04\\Day-04-Demonstration-Finished\\bs-demo-finished-04\\Day04Demo.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1503,8 +1503,8 @@
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {
-            "C:\\SDEV\\SDEV2351\\lessons\\lesson04\\Day-04-Demonstration-Finished\\bs-demo-finished-04\\Day04Demo\\Day04Demo.csproj": {
-              "projectPath": "C:\\SDEV\\SDEV2351\\lessons\\lesson04\\Day-04-Demonstration-Finished\\bs-demo-finished-04\\Day04Demo\\Day04Demo.csproj"
+            "A:\\SDEV\\2351\\lessons\\lesson04\\Day-04-Demonstration-Finished\\bs-demo-finished-04\\Day04Demo\\Day04Demo.csproj": {
+              "projectPath": "A:\\SDEV\\2351\\lessons\\lesson04\\Day-04-Demonstration-Finished\\bs-demo-finished-04\\Day04Demo\\Day04Demo.csproj"
             }
           }
         }

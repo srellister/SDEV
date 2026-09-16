@@ -1,0 +1,25 @@
+@page "/login"
+@using Fluxor
+@inherits Fluxor.Blazor.Web.Components.FluxorComponent
+@inject IState<UserState> UserState
+@inject IDispatcher Dispatcher
+
+<h3>Login</h3>
+
+<p>Current role: <strong>@UserState.Value.Role</strong></p>
+
+<div class="btn-group">
+    <button class="btn btn-outline-primary" @onclick='() => SetRole("User")'>Login as User</button>
+    <button class="btn btn-outline-danger" @onclick='() => SetRole("Admin")'>Login as Admin</button>
+</div>
+
+<div class="mt-3">
+    <a href="/admin" class="btn btn-warning">Go to Admin Dashboard</a>
+</div>
+
+@code {
+    private void SetRole(string role)
+    {
+        Dispatcher.Dispatch(new SetUserRoleAction(role));
+    }
+}

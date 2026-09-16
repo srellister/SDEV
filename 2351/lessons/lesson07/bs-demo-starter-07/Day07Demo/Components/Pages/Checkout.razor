@@ -1,0 +1,62 @@
+@page "/checkout"
+@using Fluxor
+@inherits Fluxor.Blazor.Web.Components.FluxorComponent
+@inject IState<CartState> CartState
+@inject IDispatcher Dispatcher
+
+@* ============================================================ *@
+@* DEMONSTRATION (CODE LIVE).                                    *@
+@*                                                               *@
+@* Step 1 — Add the guard to this page:                          *@
+@*   TODO: Inject NavigationManager                              *@
+@*   TODO: Override OnInitialized                                *@
+@*   TODO: Check if CartState.Value.Items.Count == 0             *@
+@*   TODO: If empty, redirect to "/shop" and return              *@
+@*                                                               *@
+@* Steps 2-4 are run/test steps with no code here — see the      *@
+@*   Demonstration Walkthrough.                                  *@
+@*                                                               *@
+@* Step 5 — After creating Guards/CartGuard.cs, replace the      *@
+@*   inline check with CartGuard.ShouldRedirect(CartState.Value).*@
+@* ============================================================ *@
+
+<h3>Checkout</h3>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Item</th>
+            <th>Price</th>
+            <th>Qty</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in CartState.Value.Items)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Price.ToString("C")</td>
+                <td>@item.Quantity</td>
+                <td>
+                    <button class="btn btn-sm btn-danger"
+                            @onclick="() => Remove(item.Name)">
+                        Remove
+                    </button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<p><strong>Total:</strong> @CartState.Value.Items.Sum(i => i.Price * i.Quantity).ToString("C")</p>
+
+@code {
+    // TODO (Demonstration, Step 1): Override OnInitialized, call base.OnInitialized(),
+    // then add the guard — redirect to "/shop" when the cart is empty.
+
+    private void Remove(string itemName)
+    {
+        Dispatcher.Dispatch(new RemoveFromCartAction(itemName));
+    }
+}

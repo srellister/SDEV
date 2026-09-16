@@ -1,0 +1,36 @@
+@page "/form/step1"
+@using Fluxor
+@inherits Fluxor.Blazor.Web.Components.FluxorComponent
+@inject IState<FormState> FormState
+@inject IDispatcher Dispatcher
+@inject NavigationManager Navigation
+
+<h3>Form Wizard -- Step 1 of 3</h3>
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Personal Information</h5>
+        <p>This is the entry point -- no guard needed.</p>
+
+        <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input type="text" class="form-control" placeholder="Enter your name" />
+        </div>
+
+        <button class="btn btn-primary" @onclick="CompleteAndNext">
+            Next: Step 2
+        </button>
+    </div>
+</div>
+
+<div class="mt-3 text-muted">
+    Completed steps: @string.Join(", ", FormState.Value.CompletedSteps.Order())
+</div>
+
+@code {
+    private void CompleteAndNext()
+    {
+        Dispatcher.Dispatch(new CompleteStepAction(1));
+        Navigation.NavigateTo("/form/step2");
+    }
+}

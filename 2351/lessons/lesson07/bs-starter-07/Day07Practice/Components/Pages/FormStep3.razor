@@ -1,0 +1,39 @@
+@page "/form/step3"
+@using Fluxor
+@inherits Fluxor.Blazor.Web.Components.FluxorComponent
+@inject IState<FormState> FormState
+@inject IDispatcher Dispatcher
+@inject NavigationManager Navigation
+
+<h3>Form Wizard -- Step 3 of 3</h3>
+
+@* ============================================================ *@
+@* PRACTICE 3 (take-home stretch): Add a route guard here.                  *@
+@*                                                               *@
+@* TODO: Override OnInitialized                                  *@
+@* TODO: Check if steps 1 AND 2 are both completed              *@
+@* TODO: If not, redirect to the earliest incomplete step        *@
+@*       (e.g., if step 1 is missing, go to "/form/step1")      *@
+@* ============================================================ *@
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Confirmation</h5>
+        <p>Review your information and submit.</p>
+
+        <button class="btn btn-success" @onclick="Submit">
+            Submit Form
+        </button>
+    </div>
+</div>
+
+<div class="mt-3 text-muted">
+    Completed steps: @string.Join(", ", FormState.Value.CompletedSteps.Order())
+</div>
+
+@code {
+    private void Submit()
+    {
+        Dispatcher.Dispatch(new CompleteStepAction(3));
+    }
+}

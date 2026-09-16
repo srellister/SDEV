@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KVRQgVVxZtk=",
+  "dgSpecHash": "5Yk/mSfxUAg=",
   "success": true,
-  "projectFilePath": "C:\\SDEV\\SDEV2351\\lessons\\lesson04\\Day-04-Practice-Starter\\bs-starter-04\\Day04Practice.Tests\\Day04Practice.Tests.csproj",
+  "projectFilePath": "A:\\SDEV\\2351\\lessons\\lesson04\\Day-04-Practice-Starter\\bs-starter-04\\Day04Practice.Tests\\Day04Practice.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\srell\\.nuget\\packages\\fluxor\\6.0.0\\fluxor.6.0.0.nupkg.sha512",
     "C:\\Users\\srell\\.nuget\\packages\\fluxor.blazor.web\\6.0.0\\fluxor.blazor.web.6.0.0.nupkg.sha512",
