@@ -1,0 +1,40 @@
+@page "/counter"
+
+@inherits FluxorComponent
+@inject IState<Day04Demo.Features.Counter.Store.CounterState> CounterState
+@inject IDispatcher Dispatcher
+
+
+<PageTitle>Counter</PageTitle>
+
+<h1>Counter</h1>
+
+<p class="lead">Current count: <strong>@CounterState.Value.Count</strong></p>
+
+<div class="btn-group" role="group">
+    <button class="btn btn-success" @onclick="Increment">+ Increment</button>
+    <button class="btn btn-danger" @onclick="Decrement">- Decrement</button>
+    <button class="btn btn-secondary" @onclick="SetToTen">Set to 10</button>
+</div>
+
+@code {
+    // TODO: Add @inherits FluxorComponent below the @page directive (line 2)
+    // TODO: Add @inject IState<CounterState> CounterState
+    // TODO: Add @inject IDispatcher Dispatcher
+    // TODO: Replace the hardcoded "0" with @CounterState.Value.Count
+
+    private void Increment()
+    {
+        Dispatcher.Dispatch(new IncrementCounterAction());
+    }
+
+    private void Decrement()
+    {
+        Dispatcher.Dispatch(new DecrementCounterAction());
+    }
+
+    private void SetToTen()
+    {
+        Dispatcher.Dispatch(new SetCounterAction(10));
+    }
+}

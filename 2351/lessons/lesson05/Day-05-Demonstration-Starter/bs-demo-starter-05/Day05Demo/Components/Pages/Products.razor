@@ -1,0 +1,70 @@
+@page "/products"
+@* TODO (Demonstration, Step 6): Wire this page to the Fluxor store.
+   Add the three directives the instructor types live:
+     @inherits FluxorComponent
+     @inject IState<ProductState> ProductState
+     @inject IDispatcher Dispatcher *@
+
+<PageTitle>Products</PageTitle>
+
+<h1>Product Catalog</h1>
+
+@* TODO (Demonstration, Step 6): Replace the `isLoading` placeholder field below
+   with ProductState.Value.IsLoading once the @inject directives are added. *@
+@if (isLoading)
+{
+    <div class="d-flex align-items-center mt-3">
+        <div class="spinner-border text-primary me-3" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+        <span>Loading products...</span>
+    </div>
+}
+@* TODO (Demonstration, Step 6): Replace the `errorMessage` placeholder field
+   below with ProductState.Value.ErrorMessage. *@
+else if (errorMessage is not null)
+{
+    <div class="alert alert-danger mt-3" role="alert">
+        <h5 class="alert-heading">Error Loading Products</h5>
+        <p>@errorMessage</p>
+    </div>
+}
+else
+{
+    <div class="row mt-3">
+        @* TODO (Demonstration, Step 6): Replace `_products` below with
+           ProductState.Value.Items. The card markup is pre-built -- only
+           the iteration source changes. *@
+        @foreach (var product in _products)
+        {
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">@product.Name</h5>
+                        <p class="card-text">@product.Price.ToString("C")</p>
+                        <span class="badge bg-secondary">@product.Category</span>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+
+@code {
+    // These framework types (FluxorComponent, IState<>, IDispatcher, ProductState.Value)
+    // are introduced during today's lesson — instructor types live-code lines below.
+    // Placeholder fields -- the instructor replaces every read of these with
+    // ProductState.Value.IsLoading / .ErrorMessage / .Items during Step 6.
+    // They are mutable fields (not consts) so the project compiles with no
+    // warnings until the real state bindings are typed in.
+    // pre-wiring tour: starts true so the spinner is visible on first run;
+    // instructor flips this read to ProductState.Value.IsLoading during live-code Step 6,
+    // and the state defaults give the same loading-true initial visual.
+    private bool isLoading = true;
+    private string? errorMessage = null;
+    private List<Product> _products = [];
+
+    // TODO (Demonstration, Step 6): Override OnInitialized, call
+    // base.OnInitialized(), then dispatch a new LoadProductsAction to kick off
+    // the async flow.
+}
