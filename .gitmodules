@@ -4,9 +4,12 @@
 [submodule "2351"]
 	path = 2351
 	url = https://github.com/srellister/sdev2351
-[submodule "2451"]
+[submodule "2451src"]
 	path = 2451src
 	url = https://github.com/NAIT-SDEV2451/sdev2451-oe01-student-workbook-srellister.git
+[submodule "2451"]
+	path = 2451
+	url = ://github.com/srellister/sdev2451.git
 [submodule "2501"]
 	path = 2501
 	url = https://github.com/srellister/sdev2501
